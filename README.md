@@ -4,9 +4,9 @@ This repository contains the ETHkey Paytr Protocol, a protocol for secure and ef
 
 ## Project Overview and Key Features
 
-The ETHkey Paytr Protocol is designed to provide a secure and efficient way to handle transactions on the Ethereum blockchain. Key features include:
-- Secure Ethereum key generation and management
-- Implementation of the Paytr protocol for transactions
+The ETHkey Paytr Protocol is designed to provide secure and efficient transactions on the Ethereum blockchain. Key features include:
+- Ethereum key generation and management
+- Paytr protocol implementation for secure transactions
 - Modular design for easy maintenance and extension
 
 ## Setup and Usage
@@ -55,6 +55,30 @@ If you encounter any issues during setup or usage, please refer to the following
 3. Verify that your environment variables are set up correctly in the `.env` file.
 4. Consult the project's issue tracker on GitHub for any known issues and their solutions.
 
+## Usage Examples and API Documentation
+
+### Generating an Ethereum Key
+```js
+const { generateKey } = require('./src/ethkey');
+const key = generateKey();
+console.log('Generated Ethereum Key:', key);
+```
+
+### Creating a Paytr Transaction
+```js
+const { createTransaction } = require('./src/paytr');
+const transaction = createTransaction({ from: '0x...', to: '0x...', value: 100 });
+console.log('Created Paytr Transaction:', transaction);
+```
+
+## Running Tests and Interpreting Results
+
+To run the tests, use the following command:
+```sh
+npm test
+```
+The test results will be displayed in the terminal. Ensure that all tests pass before submitting any changes.
+
 ## Contributing
 
 We welcome contributions to the ETHkey Paytr Protocol! To contribute, please follow these steps:
@@ -68,13 +92,6 @@ We welcome contributions to the ETHkey Paytr Protocol! To contribute, please fol
 Please ensure that your code follows our coding standards and includes tests for any new functionality.
 
 For detailed guidelines on contributing, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-### Running Tests Locally
-
-Before submitting a pull request, please run the tests locally to ensure that your changes do not introduce any issues. To run the tests, use the following command:
-```sh
-npm test
-```
 
 ### Code of Conduct
 
@@ -103,21 +120,3 @@ This module contains functions for Ethereum key generation and management.
 #### `src/paytr.js`
 
 This module contains functions for implementing the Paytr protocol.
-
-### Examples
-
-Here are some examples of how to use the ETHkey Paytr Protocol in real-world scenarios:
-
-1. **Generating an Ethereum Key**:
-   ```js
-   const { generateKey } = require('./src/ethkey');
-   const key = generateKey();
-   console.log('Generated Ethereum Key:', key);
-   ```
-
-2. **Creating a Paytr Transaction**:
-   ```js
-   const { createTransaction } = require('./src/paytr');
-   const transaction = createTransaction({ from: '0x...', to: '0x...', value: 100 });
-   console.log('Created Paytr Transaction:', transaction);
-   ```
