@@ -13,7 +13,7 @@ function generatePrivateKey() {
 function getPublicKey(privateKey) {
   const privateKeyBuffer = Buffer.from(privateKey, 'hex');
   const publicKey = secp256k1.publicKeyCreate(privateKeyBuffer, false).slice(1);
-  return publicKey.toString('hex');
+  return publicKey.toString('hex').padStart(128, '0');
 }
 
 function getAddress(publicKey) {
