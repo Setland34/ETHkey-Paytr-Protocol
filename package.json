@@ -15,7 +15,7 @@
     "some-dependency": "^0.0.1-security"
   },
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.5.1"
   },
   "author": "Setland34",
   "license": "MIT",
