@@ -1,11 +1,29 @@
-const { add, subtract } = require('./utils');
+const { generatePrivateKey, getPublicKey, getAddress } = require('./ethkey');
+const { createTransaction, verifyTransaction } = require('./paytr');
 
 function main() {
-  const a = 5;
-  const b = 3;
+  // Generate an Ethereum key pair
+  const privateKey = generatePrivateKey();
+  const publicKey = getPublicKey(privateKey);
+  const address = getAddress(publicKey);
 
-  console.log(`Adding ${a} and ${b}:`, add(a, b));
-  console.log(`Subtracting ${b} from ${a}:`, subtract(a, b));
+  console.log('Generated Ethereum Key Pair:');
+  console.log('Private Key:', privateKey);
+  console.log('Public Key:', publicKey);
+  console.log('Address:', address);
+
+  // Create a Paytr transaction
+  const transaction = createTransaction({
+    from: address,
+    to: '0xRecipientAddress',
+    value: 100,
+  });
+
+  console.log('Created Paytr Transaction:', transaction);
+
+  // Verify the Paytr transaction
+  const isValid = verifyTransaction(transaction);
+  console.log('Is the transaction valid?', isValid);
 }
 
 main();

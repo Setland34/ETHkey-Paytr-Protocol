@@ -6,19 +6,16 @@
   "scripts": {
     "start": "node src/index.js",
     "build": "echo 'Building the project...' && exit 0",
-    "test": "echo 'Running tests...' && exit 0"
+    "test": "jest"
   },
-  "directories": {
-    "test": "tests"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "ethereumjs-wallet": "^1.0.2",
-    "paytr": "^1.0.8"
+    "crypto": "^1.0.1",
+    "js-sha3": "^0.8.0",
+    "secp256k1": "^4.0.2"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
-  }
+    "jest": "^27.0.6"
+  },
+  "author": "Setland34",
+  "license": "MIT"
 }

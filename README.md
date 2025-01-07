@@ -2,6 +2,13 @@
 
 This repository contains the ETHkey Paytr Protocol, a protocol for secure and efficient transactions on the Ethereum blockchain.
 
+## Project Overview and Key Features
+
+The ETHkey Paytr Protocol is designed to provide a secure and efficient way to handle transactions on the Ethereum blockchain. Key features include:
+- Secure Ethereum key generation and management
+- Implementation of the Paytr protocol for transactions
+- Modular design for easy maintenance and extension
+
 ## Setup and Usage
 
 1. Clone the repository:
