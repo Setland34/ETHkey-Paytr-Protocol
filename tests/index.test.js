@@ -32,7 +32,7 @@ test('createTransaction function', () => {
 });
 
 test('verifyTransaction function', () => {
-  const transaction = createTransaction({ from: '0x123', to '0x456', value: 100 });
+  const transaction = createTransaction({ from: '0x123', to: '0x456', value: 100 });
   const isValid = verifyTransaction(transaction);
   expect(isValid).toBe(true);
 });
