@@ -22,8 +22,16 @@ function getAddress(publicKey) {
   return `0x${address}`;
 }
 
+function generateKey() {
+  const privateKey = generatePrivateKey();
+  const publicKey = getPublicKey(privateKey);
+  const address = getAddress(publicKey);
+  return { privateKey, publicKey, address };
+}
+
 module.exports = {
   generatePrivateKey,
   getPublicKey,
   getAddress,
+  generateKey,
 };

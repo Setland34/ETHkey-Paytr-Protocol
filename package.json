@@ -6,23 +6,18 @@
   "scripts": {
     "start": "node src/index.js",
     "build": "echo 'Building the project...' && exit 0",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "dependencies": {
     "crypto": "^1.0.1",
-    "secp256k1": "^4.0.2",
-    "js-sha3": "^0.8.0"
+    "js-sha3": "^0.8.0",
+    "secp256k1": "^4.0.2"
   },
   "devDependencies": {
+    "eslint": "^9.17.0",
     "jest": "^27.0.6"
   },
   "author": "Setland34",
   "license": "MIT"
 }
-"scripts": {
-  "start": "node src/index.js",
-  "build": "echo 'Building the project...' && exit 0",
-  "test": "jest",
-  "lint": "eslint ."
-}
-npm install eslint --save-dev
