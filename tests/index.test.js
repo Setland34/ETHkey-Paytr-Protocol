@@ -3,14 +3,14 @@ const { createTransaction, verifyTransaction } = require('../src/paytr');
 
 test('generatePrivateKey function', () => {
   const privateKey = generatePrivateKey();
-  expect(privateKey).toHaveLength(64);
+  expect(privateKey).toHaveLength(64); // Update this to the actual length
   expect(typeof privateKey).toBe('string');
 });
 
 test('getPublicKey function', () => {
   const privateKey = generatePrivateKey();
   const publicKey = getPublicKey(privateKey);
-  expect(publicKey).toHaveLength(128);
+  expect(publicKey).toHaveLength(128); // Update this to the actual length
   expect(typeof publicKey).toBe('string');
 });
 
