@@ -22,7 +22,26 @@ function verifyTransaction(transaction) {
   return hash === calculatedHash;
 }
 
+function signTransaction(transaction, privateKey) {
+  const transactionHash = generateTransactionHash(transaction);
+  const sign = crypto.createSign('SHA256');
+  sign.update(transactionHash);
+  sign.end();
+  const signature = sign.sign(privateKey, 'hex');
+  return signature;
+}
+
+function verifyTransactionSignature(transaction, signature, publicKey) {
+  const transactionHash = generateTransactionHash(transaction);
+  const verify = crypto.createVerify('SHA256');
+  verify.update(transactionHash);
+  verify.end();
+  return verify.verify(publicKey, signature, 'hex');
+}
+
 module.exports = {
   createTransaction,
   verifyTransaction,
+  signTransaction,
+  verifyTransactionSignature,
 };
