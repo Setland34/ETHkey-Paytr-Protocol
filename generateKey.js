@@ -1,0 +1,1 @@
+const { generatePrivateKey, getPublicKey, getAddress } = require('./src/ethkey');\n\nconst privateKey = generatePrivateKey();\nconst publicKey = getPublicKey(privateKey);\nconst address = getAddress(publicKey);\n\nconsole.log('Generated Ethereum Key Pair:');\nconsole.log('Private Key:', privateKey);\nconsole.log('Public Key:', publicKey);\nconsole.log('Address:', address);
