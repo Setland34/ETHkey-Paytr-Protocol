@@ -219,3 +219,10 @@ Here are some examples of how to use the ETHkey Paytr Protocol in real-world sce
    const transaction = createTransaction({ from: '0x...', to: '0x...', value: 100 });
    console.log('Created Paytr Transaction:', transaction);
    ```
+
+3. **Verifying a Paytr Transaction**:
+   ```js
+   const { verifyTransaction } = require('./src/paytr');
+   const isValid = verifyTransaction(transaction);
+   console.log('Is the transaction valid?', isValid);
+   ```
