@@ -19,3 +19,9 @@
   "author": "Setland34",
   "license": "MIT"
 }
+"scripts": {
+  "start": "node src/index.js",
+  "build": "echo 'Building the project...' && exit 0",
+  "test": "jest",
+  "lint": "eslint ."
+}
