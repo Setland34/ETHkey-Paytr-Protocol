@@ -49,6 +49,12 @@ console.log('Created Paytr Transaction:', transaction);
 ```js
 const { verifyTransaction } = require('./src/paytr');
 
+const transaction = createTransaction({
+  from: '0xYourAddress',
+  to: '0xRecipientAddress',
+  value: 100,
+});
+
 const isValid = verifyTransaction(transaction);
 console.log('Is the transaction valid?', isValid);
 ```
@@ -111,8 +117,8 @@ The ETHkey Paytr Protocol offers several unique advantages over other similar pr
 
 1. Clone the repository:
    ```sh
-   git clone git@github.com:Setland34/ETHkey-Paytr-Protocal.git
-   cd ETHkey-Paytr-Protocal
+   git clone git@github.com:Setland34/ETHkey-Paytr-Protocol.git
+   cd ETHkey-Paytr-Protocol
    ```
 
 2. Install Node.js and npm:
